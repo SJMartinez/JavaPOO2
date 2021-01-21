@@ -2,10 +2,8 @@ package com.SantiagoMartinez.EjercicioPOO2;
 import java.util.ArrayList;
 
 //La clase Garage manejará el almacenamiento de todos los objetos clase Vehículo en un ArrayList.
-//A su vez sobreescribe los métodos de interfaz Servicios para ordenar y listar los vehículos.
-//Hay una dependencia de Garage con la clase Vehiculo, que por el diseño de Garage y Vehículo hay vía libre
-//de poder aplicar correctamente un framework de inyección de dependencias.
-public class Garage implements Servicios {
+//A su vez sobreescribe los métodos de interfaz IGarage para ordenar y listar los vehículos.
+public class Garage implements IGarage {
 	
 	private ArrayList<Vehiculo> vehiculos;
 	
@@ -15,12 +13,13 @@ public class Garage implements Servicios {
 	}
 	
 	//Métodos agregar
+	@Override
 	public void agregar(Vehiculo vehiculo) {		
 		this.vehiculos.add(vehiculo);
 	}
 
 	
-	private static String separador = "=============================";
+	private static final String separador = "=============================";
 	
 	//método listar, imprime el ArrayList
 	@Override
@@ -38,7 +37,7 @@ public class Garage implements Servicios {
 	        Vehiculo temp = null;  
 	         for(int i=0; i < n; i++){  
 	                 for(int j=1; j < (n-i); j++){  
-	                          if(parseo(this.vehiculos.get(j-1)) < parseo(this.vehiculos.get(j))){  
+	                          if(this.vehiculos.get(j-1).parseo() < this.vehiculos.get(j).parseo()){  
 	                                 temp = this.vehiculos.get(j-1);  
 	                                 this.vehiculos.set(j-1, this.vehiculos.get(j));
 	                                 this.vehiculos.set(j, temp);	                                

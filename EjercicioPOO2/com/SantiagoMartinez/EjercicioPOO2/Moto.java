@@ -1,6 +1,6 @@
 package com.SantiagoMartinez.EjercicioPOO2;
 
-public class Moto extends Vehiculo implements Servicios {
+public class Moto extends Vehiculo  {
 
 	private String cilindrada;
 	

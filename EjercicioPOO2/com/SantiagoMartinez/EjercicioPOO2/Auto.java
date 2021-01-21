@@ -1,6 +1,6 @@
 package com.SantiagoMartinez.EjercicioPOO2;
 
-public class Auto extends Vehiculo implements Servicios {
+public class Auto extends Vehiculo  {
 
 	private int puertas;
 	
