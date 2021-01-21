@@ -1,5 +1,5 @@
 # JavaPOO2
-Enfoque diferente del [primer JavaPOO](https://github.com/SJMartinez/JavaPOO). Interfaces, mejor Factory y especialización. Posibilidad de DI.
+Enfoque diferente del [primer JavaPOO](https://github.com/SJMartinez/JavaPOO). Interfaces, Abstract Factory dessign pattern.
 
 <p class="has-line-data" data-line-start="0" data-line-end="1">Ejercicio Trainee Onready</p>
 <p class="has-line-data" data-line-start="2" data-line-end="4">Imaginemos una concesionaria de autos y motos.<br>
